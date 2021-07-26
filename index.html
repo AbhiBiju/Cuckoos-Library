@@ -15,22 +15,22 @@
       <div class="container">
         <div class="columns">
             <div class="column is-half">
-                <div class="notification ">
+                <div class="main-title ">
                   <h1 class="is-size-1 is-warning has-text-weight-bold has-text-centered" id="book_title">CUCKOO'S LIBRARY</h1>
                 </div>
             </div>
-            <div class="column is-one-eighth"></div>
+            <div class="column is-one-tenths"></div>
  
             <div class="column is-half">
-              <div class="notification is-warning has-text-centered">
+              <div class="notification has-text-centered" id="navbar">
                  
-                  <button class="button is-info is-rounded is-medium">Search</button>
+                  <button class="button is-rounded is-medium" id="search-btn">Search</button>
                 
-                  <button class="button is-info is-rounded is-medium">Code Quiz</button>
+                  <button class="button is-rounded is-medium" id="code-quiz">Code Quiz</button>
                 
-                  <button class="button is-info is-rounded is-medium">Saved Book</button>
+                  <button class="button is-rounded is-medium" id="saved-book">Saved Book</button>
                 
-                  <button class="button is-info is-rounded is-medium">Contact</button>
+                  <button class="button is-rounded is-medium" id="contact-btn">Contact</button>
                 
               </div>
             </div>
@@ -41,19 +41,19 @@
     <section class="section">
       <div class="container">
         <div class="columns">
-            
-           <div class="column"></div> 
-           <div class="column is-one-third">
+           <div class="column is-one-third" >
               <div class="container">
-                <div class="notification is-warning">
+                <div class="bookOfTheMonth" id="bookOfTheMonth-column">
                     <div class="section">
                       <figure class="image">
                           <img src="./jurassic park book cover.jpeg" style="max-width:fit-content">    
                       </figure>                    
                   </div>
-                  <div class="notification is-warning">
-                    <h4 class="book_of_month_1 has-text-centered has-text-weight-bold">Book of the Month</h4>
+                  <br>
+                  <div>
+                    <h5 class="book_of_month_1 has-text-centered has-text-weight-bold">Book of the Month</h5>
                     <h4 class="book_of_month_2 has-text-centered has-text-weight-bold">July 2021</h4>
+                    <br>
                   </div>
                 </div>
                 
@@ -61,64 +61,67 @@
            </div>
            
            <div class="column"></div>
-          <div class="column is-half">
-            <div class="notification is-warning is-text-centered">
-              <h4 class="quiz_page_1 has-text-centered has-text-weight-bold">Need a New Read</h4>
-              <h4 class="quiz_page_2 has-text-centered has-text-weight-bold">Take our Book Finder Quiz!</h4>
-            <div class="section">
-              <section class="section"></section>
-              <div class="notification">
-                <h4 class="image_GIF has-text-centered has-text-weight-bold">GIF Place Holder</h4>  
-            </div>
-            </div>
-              <section class="section has-text-centered">
-                  <button class="button is-rounded is-info">Start Button</button>
-              </section>    
-            <section class="section"></section>
-            </div>
+          <div class="column is-half" id="book-finder-quiz">
+              <div class="book-finder-quiz">
+                  <div class="book-finder is-text-centered">
+                      <h4 class="quiz_page_1 has-text-centered has-text-weight-bold">Need a New Read?</h4>
+                      <h4 class="quiz_page_2 has-text-centered has-text-weight-bold">Take our Book Finder Quiz!</h4>
+                      <div class="column">
+                          <section class="section has-text-centered">
+                            <div class="notification has-text-centered"id="gif-placeholder">
+                              <img class="pic-gif-placeholder has-text-centered has-text-weight-bold" src="" alt="GIG Placeholder">
+                            </div>                            
+                          </section>            
+                          <section class="section has-text-centered">
+                              <button class="button is-rounded is-medium" id="book-finder-search-btn">Start Button</button>
+                          </section>    
+                      </div>
+                  </div>
+              </div>
           </div>
-          
         </div>
       </div>
     </section>
   </section>
+
   <section class="hero is-fullheight">
     <section class="section">
         <div class="container">
             <div class="columns">
               <div class="column is-one-third">
                 <div class="container">
-                  <div class="notification is-warning">
+                  <div class="image-gif-holder">
                     <section class="section"></section>
-                      <div class="section">
-                          <div class="notification">
-                              <h4 class="image_GIF has-text-centered has-text-weight-bold">Either Single Image or GIF Holder</h4>  
-                          </div>
-                                          
-                      </div> 
+                      <section class="section has-text-centered">
+                          <div class="notification has-text-centered" id="gif-placeholder">
+                              <img class="image-GIF has-text-centered has-text-weight-bold" src="" alt="Either Single Image or GIF Holder">  
+                          </div>                                          
+                        </section> 
                     <section class="section"></section>                    
                   </div>
                   
                 </div>  
              </div>
+            
                 <div class="column">
-                    <div class="notification is-warning has-text-centered">
-                      <div class="title">Search By:</div>
+                    <div class="search-by-option is-warning has-text-centered">
+                        <div class="title" id="search-by">Search By:</div>
                         <section class="section"></section>
                         <div class="title" id=title_holder>Title:</div>
-                        <div class="notification is-warning">
-                          <textarea type="text" id="input1"></textarea>
+                        <div class="title-input">
+                          <textarea type="text" id="input1" placeholder="Title of the Book"></textarea>  
                         </div>
                         <div class="title" id="author">Author:</div>
-                        <div class="notification is-warning">
-                          <textarea type="text" id="input2"></textarea>
+                        <div class="author-input">
+                          <textarea type="text" id="input2" placeholder="Name of the Author"></textarea>
                         </div>
                         <div class="title" id="genre">Genre:</div>
-                        <div class="notification is-warning">
-                          <textarea type="text" id="input3"></textarea>
+                        <div class="genre-input">
+                          <textarea type="text" id="input3" placeholder="Genre"></textarea>
                         </div>
-                        <button class="button is-rounded is-info">Start Button</button>
-                        <section class="section"></section>
+                        <section class="section has-text-centered">
+                          <button class="button is-rounded is-medium has-text-weight-bold" id="search-by-search-btn">Start Button</button>
+                      </section>  
                       </div>
                 </div>
             </div>
