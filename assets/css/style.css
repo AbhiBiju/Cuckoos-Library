@@ -36,17 +36,17 @@
 }
 
 .hero {
-  background: url(./assets/images/background.jpg) center / cover;
+  background: url(/assets/images/background.jpg) center / cover;
   border: solid 30px #ff9100;
 }
 @media (max-width: 1024px) {
   .hero {
-    background: url(./assets/images/background.jpg) center / cover;
+    background: url(/assets/images/background.jpg) center / cover;
   }
 }
 @media (max-width: 768px) {
   .hero {
-    background: url(./assets/images/background.jpg) center / cover;
+    background: url(/assets/images/background.jpg) center / cover;
   }
 }
 body {
@@ -141,7 +141,7 @@ body {
   font-size: large;
   color: rgb(2, 2, 83);
 }
-#book-finder-search-btn {
+#nextBtn {
   border-color: rgb(243, 245, 247);
   background: #ff9100;
   color: navy;
@@ -149,10 +149,23 @@ body {
   flex-direction: column;
   cursor: pointer;
 }
-#book-finder-search-btn:hover {
+#nextBtn:hover {
   background: rgb(217, 241, 161);
 }
-
+#newBooks {
+  width: 50rem;
+  height: 10rem;
+  border: 5px solid darkorange;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#newBooks > img {
+  padding: 0.5rem;
+  width: 12rem;
+  height: auto;
+}
 .image-gif-holder {
   background: rgb(245, 172, 36);
   border: solid rgb(250, 185, 64) 25px;
@@ -186,7 +199,7 @@ input {
 input:hover {
   background: rgb(231, 181, 119);
 }
-#search-by-search-btn {
+#bookSearchBtn {
   border-color: rgb(243, 245, 247);
   background: #ff9100;
   color: rgb(13, 13, 87);
@@ -194,7 +207,7 @@ input:hover {
   flex-direction: column;
   cursor: pointer;
 }
-#search-by-search-btn:hover {
+#bookSearchBtn:hover {
   background: rgb(217, 241, 161);
 }
 #search-by,
