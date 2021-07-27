@@ -184,13 +184,13 @@ textarea:hover{
 #gif-placeholder{
     border: solid 2px 10px;
     background: rgb(189, 187, 187);
-    height: 300px;
+    height: 400px;
     display: flex;   
 }
-#image-placeholder{
+#img-placeholder{
     border: solid 2px 10px;
     background: rgb(189, 187, 187);
-    height: 300px;
+    height: 600px;
     display: flex;   
 }
 .pic-gif-placeholder{
