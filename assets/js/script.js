@@ -8,9 +8,30 @@ var newBooks = $("#newBooks");
 /* 
     https://www.googleapis.com/books/v1/volumes?q=${titleValue}+inauthor:$    {authorValue}&key=AIzaSyCcXM9xp7ZReVIVy-jlgcN7S1C2U6gmlH4
  */
-bookSearchBtn.click(async () => {
+
+bookSearchBtn.click(getSearch);
+
+$("#titleSearch").keydown((event) => {
+  if (event.which == 13) {
+    getSearch();
+  }
+});
+
+$("#authorSearch").keydown((event) => {
+  if (event.which == 13) {
+    getSearch();
+  }
+});
+
+$("#genreSearch").keydown((event) => {
+  if (event.which == 13) {
+    getSearch();
+  }
+});
+
+async function getSearch() {
   newBooks.empty();
-  console.log("Books");
+
   var titleValue = titleSearch.val().trim().replace(/\s/g, "");
   var authorValue = authorSearch.val().trim().replace(/\s/g, "+");
   var genreValue = genreSearch.val().trim().replace(/\s/g, "+");
@@ -29,8 +50,6 @@ bookSearchBtn.click(async () => {
   }
   apiURL.concat(apiKey);
 
-  console.log(`${apiURL}`);
-
   const response = await fetch(`${apiURL}`);
   const data = await response.json();
 
@@ -48,26 +67,27 @@ bookSearchBtn.click(async () => {
       newCard.append(cardImage);
 
       var newContent = $(`<div class="media-content">`);
+      if (item.volumeInfo.authors) {
+        var newTitle = $(`<p class="title is-4">`);
+        newTitle.text(`Title: ${item.volumeInfo.title}`);
+        newContent.append(newTitle);
 
-      var newTitle = $(`<p class="title is-4">`);
-      newTitle.text(`Title: ${item.volumeInfo.title}`);
-      newContent.append(newTitle);
+        var newSubTitle = $(`<p class="subtitle is-6">`);
+        newSubTitle.text(`Author: ${item.volumeInfo.authors[0]}`);
+        newContent.append(newSubTitle);
 
-      var newSubTitle = $(`<p class="subtitle is-6">`);
-      newSubTitle.text(`Author: ${item.volumeInfo.authors[0]}`);
-      newContent.append(newSubTitle);
+        newCard.append(newContent);
 
-      newCard.append(newContent);
+        var newFooter = $('<footer class="card-footer">');
+        var saveBtn = $(` <a class="card-footer-item has-text-weight-bold saveBtn">Save</a>`);
+        newFooter.append(saveBtn);
+        newCard.append(newFooter);
 
-      var newFooter = $('<footer class="card-footer">');
-      var saveBtn = $(` <a class="card-footer-item has-text-weight-bold saveBtn">Save</a>`);
-      newFooter.append(saveBtn);
-      newCard.append(newFooter);
-
-      newBooks.append(newCard);
+        newBooks.append(newCard);
+      }
     }
   });
-});
+}
 
 var genreGifs = ["Theater", "Reading", "Colors", "Daydreaming", "Vacation"];
 
@@ -182,8 +202,12 @@ function endQuiz() {
   }
 
   var questionsBox = $("#question");
+  questionsBox.attr("style", "display:flex; gap:2rem;flex-flow:column wrap;");
   questionsBox.html(
     `Your Favorite Genre is: <button id="finalBtn" class="button is-rounded is-medium">${genreMatch}</button>`
+  );
+  questionsBox.append(
+    `<button class="button is-rounded is-small"><a style="text-decoration:none;" href="./">Take the Quiz Again</a></button>`
   );
 
   async function getBooks() {
@@ -193,10 +217,7 @@ function endQuiz() {
 
     var newDiv = $("#gif-placeholder");
     newDiv.html(" ");
-    newDiv.attr(
-      "style",
-      "display:flex; flex-flow:column wrap; gap:2rem; overflow-x:scroll; overflow-y:scroll;"
-    );
+    newDiv.attr("style", "display:flex; flex-flow:column wrap; gap:2rem; overflow-x:scroll; overflow-y:scroll;");
 
     var topTen = objectify.items;
 
@@ -277,6 +298,5 @@ $(document).on("click", ".saveBtn", (event) => {
   var card = footer.parentElement;
   srcArray.push(card.outerHTML);
   console.log(srcArray);
-  // images.forEach((image) => {});
   localStorage.setItem("savedBooks", JSON.stringify(srcArray));
 });

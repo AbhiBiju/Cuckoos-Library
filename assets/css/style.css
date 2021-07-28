@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth !important;
+  text-decoration: none !important;
+}
 .center,
 .center-column,
 .top,
@@ -257,9 +261,10 @@ input:hover {
 }
 #gif-placeholder {
   border: solid 2px 10px;
-  background: rgb(189, 187, 187);
+  border-radius: 15px;
+  background: url(https://images.unsplash.com/photo-1494809610410-160faaed4de0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGlja2luZyUyMGJvb2slMjBsaWJyYXJ5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);
   height: 25rem;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-evenly;
 }

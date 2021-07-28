@@ -17,14 +17,16 @@ button {
   gap: 2rem !important;
 }
 #booksBox {
-  border: 5px solid red !important;
+  border: 15px double hsl(26, 85%, 57%) !important;
+  border-radius: 15px;
+  box-shadow: 0px 0px 35px black, 0px 0px 35px black inset;
   width: 100%;
-  height: fit-content;
+  height: 30rem;
   display: flex;
   flex-flow: row wrap;
   word-wrap: break-word;
   position: relative;
-  overflow-y: scroll !important;
+  overflow: scroll !important;
   gap: 5rem;
   justify-content: center;
   padding-bottom: 2rem;

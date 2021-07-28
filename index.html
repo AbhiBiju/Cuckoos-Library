@@ -26,10 +26,10 @@
  
             <div class="column is-half">
               <div class="notification has-text-centered" id="navbar">
-                  <button class="button is-rounded is-medium" id="search-btn">Search</button>
-                  <button class="button is-rounded is-medium" id="code-quiz">Genre Quiz</button>
-                  <button class="button is-rounded is-medium" id="saved-book">Saved Books</button>
-                  <button class="button is-rounded is-medium" id="contact-btn">Contact</button>
+                  <button class="button is-rounded is-medium" style="padding: 0.6rem;" id="search-btn"><a style="text-decoration: none;" href="#SearchSection">Search</a></button>
+                  <button class="button is-rounded is-medium" style="padding: 0.6rem;" id="code-quiz"><a style="text-decoration: none;" href="#book-finder-quiz">Genre Quiz</a></button>
+                  <button class="button is-rounded is-medium" style="padding: 0.6rem;" id="saved-book"><a style="text-decoration: none;" href="./savedBooks.html">Saved Books</a></button>
+                  <button class="button is-rounded is-medium" style="padding: 0.6rem;" id="contact-btn"><a style="text-decoration: none;" href="https://github.com/AbhiBiju/Cuckoos-Library/">Github Repo</a></button>
               </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                     <div class="section">
                       <figure class="image">
                           <img src="./assets/images/jurassicPark.jpeg" style="max-width:fit-content">    
-                      </figure>                    
+                      </figure>
                   </div>
                   <br>
                   <div>
@@ -56,7 +56,7 @@
                   </div>
                 </div>
                 
-              </div>  
+              </div>
            </div>
            
            <div class="column"></div>
@@ -69,10 +69,10 @@
                           <section class="container has-text-centered">
                             <div class="container has-text-centered"id="gif-placeholder">
                               <img class="pic-gif-placeholder has-text-centered has-text-weight-bold" id="topicGif">
-                            </div>                            
-                          </section>            
+                            </div>
+                          </section>
                           <section class="section has-text-centered">
-                              <button class="button is-rounded is-medium" id="startBtn">Start Button</button>
+                              <button class="button is-rounded is-medium" id="startBtn">Start Quiz!</button>
                           </section>
                           <div class="has-text-centered" id="question"></div>
                         <div class="container is-flex is-flex-direction-column is-flex-wrap-nowrap has-text-centered" id="topics"></div>
@@ -87,7 +87,7 @@
   </section>
 
   <section class="hero is-fullheight">
-    <section class="section">
+    <section class="section" id="SearchSection">
         <div class="container">
             <div class="columns">
               <div class="column is-one-third">
@@ -115,7 +115,7 @@
                         <input type="text" id="genreSearch" placeholder="Genre"></input>
                       </div>
                       <section class="section has-text-centered">
-                        <button class="button is-rounded is-medium has-text-weight-bold" id="bookSearchBtn">Start Button</button>
+                        <button class="button is-rounded is-medium has-text-weight-bold" id="bookSearchBtn">Search</button>
                       </section>
                     </div>
               </div>
