@@ -9,35 +9,34 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     
 </head>
+
 <body>
   <section class="hero is-fullheight">
+
     <section class="section" id="section-1">
       <div class="container">
         <div class="columns">
             <div class="column is-half">
                 <div class="main-title ">
-                  <h1 class="is-size-1 is-warning has-text-weight-bold has-text-centered" id="book_title"><img src="./assets/images/chocobo.png" style="width: 3rem;" alt="">CUCKOO'S LIBRARY</h1>
+                  <h1 class="is-size-1 is-warning has-text-weight-bold has-text-centered" id="book_title"><img src="./assets/images/chocobo.png" style="width: 3rem;" alt="">Cuckoo's Library</h1>
                 </div>
             </div>
+
             <div class="column is-one-tenths"></div>
  
             <div class="column is-half">
               <div class="notification has-text-centered" id="navbar">
-                 
                   <button class="button is-rounded is-medium" id="search-btn">Search</button>
-                
-                  <button class="button is-rounded is-medium" id="code-quiz">Code Quiz</button>
-                
-                  <button class="button is-rounded is-medium" id="saved-book">Saved Book</button>
-                
+                  <button class="button is-rounded is-medium" id="code-quiz">Genre Quiz</button>
+                  <button class="button is-rounded is-medium" id="saved-book">Saved Books</button>
                   <button class="button is-rounded is-medium" id="contact-btn">Contact</button>
-                
               </div>
             </div>
         </div>
 
       </div>
     </section>
+    
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -66,19 +65,17 @@
                   <div class="book-finder is-text-centered">
                       <h4 class="quiz_page_1 has-text-centered has-text-weight-bold">Need a New Read?</h4>
                       <h4 class="quiz_page_2 has-text-centered has-text-weight-bold">Take our Book Finder Quiz!</h4>
-                      <div class="column">
-                          <section class="section has-text-centered">
-                            <div class="notification has-text-centered"id="gif-placeholder">
+                      <div class="column is-flex-row">
+                          <section class="container has-text-centered">
+                            <div class="container has-text-centered"id="gif-placeholder">
                               <img class="pic-gif-placeholder has-text-centered has-text-weight-bold" id="topicGif">
                             </div>                            
                           </section>            
                           <section class="section has-text-centered">
-                              <button class="button is-rounded is-medium" id="nextBtn">Start Button</button>
+                              <button class="button is-rounded is-medium" id="startBtn">Start Button</button>
                           </section>
-                          <div class="has-text-centered" id="question">
-                          <h2>Random Gif Based On Questions</h2>
-                            <p>Question Topic: <span id="topic"></span></p>
-                          </div>
+                          <div class="has-text-centered" id="question"></div>
+                        <div class="container is-flex is-flex-direction-column is-flex-wrap-nowrap has-text-centered" id="topics"></div>
                       </div>
                   </div>
               </div>
@@ -86,6 +83,7 @@
         </div>
       </div>
     </section>
+
   </section>
 
   <section class="hero is-fullheight">
@@ -95,44 +93,37 @@
               <div class="column is-one-third">
                 <div class="container">
                   <div class="image-gif-holder">
-                    <section class="section"></section>
-                      <section class="section has-text-centered">
-                          <div class="notification has-text-centered" id="gif-placeholder">
-                              <img class="image-GIF has-text-centered has-text-weight-bold" src="" alt="Either Single Image or GIF Holder">  
-                          </div>                                          
-                        </section> 
-                    <section class="section"></section>                    
+                      <section class="section has-text-centered is-flex-column-wrap" id="newBooks">
+                      </section>
                   </div>
-                  
-                </div>  
-             </div>
-            
-                <div class="column">
-                    <div class="search-by-option is-warning has-text-centered">
-                        <div class="title" id="search-by">Search By:</div>
-                        <div class="title" id=title_holder>Title:</div>
-                        <div class="title-input">
-                          <input type="text" id="titleSearch" placeholder="Title of the Book"></input>  
-                        </div>
-                        <div class="title" id="author">Author:</div>
-                        <div class="author-input">
-                          <input type="text" id="authorSearch" placeholder="Name of the Author"></input>
-                        </div>
-                        <div class="title" id="genre">Genre:</div>
-                        <div class="genre-input">
-                          <input type="text" id="genreSearch" placeholder="Genre"></input>
-                        </div>
-                        <section class="section has-text-centered">
-                          <button class="button is-rounded is-medium has-text-weight-bold" id="bookSearchBtn">Start Button</button>
-                        </section>
-                        <section id="newBooks"></section>
-                      </div>
                 </div>
+              </div>
+            
+              <div class="column">
+                  <div class="search-by-option is-warning has-text-centered">
+                      <div class="title" id="search-by">Search By:</div>
+                      <div class="title" id=title_holder>Title:</div>
+                      <div class="title-input">
+                        <input type="text" id="titleSearch" placeholder="Title of the Book"></input>
+                      </div>
+                      <div class="title" id="author">Author:</div>
+                      <div class="author-input">
+                        <input type="text" id="authorSearch" placeholder="Name of the Author"></input>
+                      </div>
+                      <div class="title" id="genre">Genre:</div>
+                      <div class="genre-input">
+                        <input type="text" id="genreSearch" placeholder="Genre"></input>
+                      </div>
+                      <section class="section has-text-centered">
+                        <button class="button is-rounded is-medium has-text-weight-bold" id="bookSearchBtn">Start Button</button>
+                      </section>
+                    </div>
+              </div>
             </div>
         </div>
     </section>
-  </section> 
-  
+  </section>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./assets/js/script.js"></script>
