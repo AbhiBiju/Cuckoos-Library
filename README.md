@@ -27,7 +27,7 @@ Cuckoo's Library is a book search tool that allows the user to look up and keep 
 
 ## Motivation
 
-Inspired by mutual interest in books and book-keeping. Find a way to track and search books by various categories.
+Inspired by mutual interest in books and reading as a hobby. Find a way to track and search books by various categories.
 
 ## Tech/Framework Used
 
