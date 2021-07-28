@@ -1,5 +1,4 @@
 var booksArray = JSON.parse(localStorage.getItem("savedBooks"));
-console.log(booksArray);
 
 var booksBox = $("#booksBox");
 booksArray.forEach((book) => {
@@ -22,14 +21,6 @@ $(document).ready(() => {
     var card = footer.parentElement;
 
     for (book of booksArray) {
-      // book = "";
-      console.log(
-        `${book.slice(
-          0,
-          -15
-        )}<button style="padding:0.7rem;margin:1rem;" class="delete is-small"></button></footer></div>`
-      );
-
       if (
         card.outerHTML ===
         `${book.slice(
@@ -39,7 +30,6 @@ $(document).ready(() => {
       ) {
         booksArray.splice(book, 1);
       }
-      console.log(booksArray);
     }
 
     localStorage.setItem("savedBooks", JSON.stringify(booksArray));

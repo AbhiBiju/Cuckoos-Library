@@ -237,12 +237,12 @@ function endQuiz() {
         var newTitle = $(`<p class="title is-4">`);
         newTitle.text(`Title: ${item.volumeInfo.title}`);
         newContent.append(newTitle);
-        console.log(newTitle);
+
 
         var newSubTitle = $(`<p class="subtitle is-6">`);
         newSubTitle.text(`Author: ${item.volumeInfo.authors[0]}`);
         newContent.append(newSubTitle);
-        console.log(newSubTitle);
+
 
         newCard.append(newContent);
 
@@ -250,10 +250,10 @@ function endQuiz() {
         var saveBtn = $(` <a class="card-footer-item has-text-weight-bold saveBtn">Save</a>`);
         newFooter.append(saveBtn);
         newCard.append(newFooter);
-        console.log(newCard);
+
 
         newDiv.append(newCard);
-        console.log(newDiv);
+
       }
     });
   }
@@ -297,6 +297,5 @@ $(document).on("click", ".saveBtn", (event) => {
   var footer = saveButton.parentElement;
   var card = footer.parentElement;
   srcArray.push(card.outerHTML);
-  console.log(srcArray);
   localStorage.setItem("savedBooks", JSON.stringify(srcArray));
 });
