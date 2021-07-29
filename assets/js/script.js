@@ -238,11 +238,9 @@ function endQuiz() {
         newTitle.text(`Title: ${item.volumeInfo.title}`);
         newContent.append(newTitle);
 
-
         var newSubTitle = $(`<p class="subtitle is-6">`);
         newSubTitle.text(`Author: ${item.volumeInfo.authors[0]}`);
         newContent.append(newSubTitle);
-
 
         newCard.append(newContent);
 
@@ -251,9 +249,7 @@ function endQuiz() {
         newFooter.append(saveBtn);
         newCard.append(newFooter);
 
-
         newDiv.append(newCard);
-
       }
     });
   }
@@ -290,12 +286,13 @@ startBtn.click((event) => {
   event.target.parentElement.remove();
 });
 
-var srcArray = [];
+var srcArray = JSON.parse(localStorage.getItem("savedBooks")) || [];
 
 $(document).on("click", ".saveBtn", (event) => {
   var saveButton = event.target;
   var footer = saveButton.parentElement;
   var card = footer.parentElement;
   srcArray.push(card.outerHTML);
+  console.log("test");
   localStorage.setItem("savedBooks", JSON.stringify(srcArray));
 });
