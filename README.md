@@ -11,6 +11,7 @@ Trilogy – Full Stack Development Program University of Miami Cohort 2021
 - Tysean Hill
 
 ## Cuckoo's Library
+- Deployment in netlify(https://cuckoos-library.netlify.app/)
 
 ### Project Description
 
